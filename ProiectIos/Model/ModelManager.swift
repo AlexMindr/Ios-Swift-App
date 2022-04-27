@@ -25,7 +25,7 @@ class ModelManager{
     
     func SaveData(FriendModel : FriendModel) -> Bool{
         shareInstance.database?.open()
-        let isSave = shareInstance.database?.executeUpdate("INSERT INTO friend (name, email) VALUES(?,?)", withArgumentsIn: [FriendModel.name, FriendModel.email])
+        let isSave = shareInstance.database?.executeUpdate("INSERT INTO Friends (name, email) VALUES(?,?)", withArgumentsIn: [FriendModel.name, FriendModel.email])
         shareInstance.database?.close()
         return isSave!
     }
@@ -50,7 +50,7 @@ class ModelManager{
     
     
 
-    func updatefriend(friend: FriendModel) -> Bool{
+    func updateFriend(friend: FriendModel) -> Bool{
         shareInstance.database?.open()
         
         let isUpdated = shareInstance.database?.executeUpdate("UPDATE friends SET name=?, email=? WHERE id=? ", withArgumentsIn: [friend.name,friend.email, friend.id])
@@ -61,9 +61,9 @@ class ModelManager{
     
     
    
-    func deletefriend(friend: FriendModel) -> Bool{
+    func deleteFriend(friend: FriendModel) -> Bool{
         shareInstance.database?.open()
-        let isDeleted = (shareInstance.database?.executeUpdate("DELETE FROM friend WHERE name=?", withArgumentsIn: [friend.name]))
+        let isDeleted = (shareInstance.database?.executeUpdate("DELETE FROM friends WHERE name=?", withArgumentsIn: [friend.name]))
         shareInstance.database?.close()
         return isDeleted!
     }

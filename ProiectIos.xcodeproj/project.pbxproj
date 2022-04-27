@@ -87,8 +87,7 @@
 			children = (
 				90E414012819988F001F1C96 /* Helper */,
 				90E413F528196233001F1C96 /* Project Files */,
-				90E413F4281961DA001F1C96 /* Controllers */,
-				90E413F3281961C8001F1C96 /* View */,
+				90E413F3281961C8001F1C96 /* ViewController */,
 				90E413F2281961BF001F1C96 /* Model */,
 				90E413E42819544F001F1C96 /* Main.storyboard */,
 				90E413E928195450001F1C96 /* LaunchScreen.storyboard */,
@@ -107,21 +106,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		90E413F3281961C8001F1C96 /* View */ = {
+		90E413F3281961C8001F1C96 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				90E413FC2819879F001F1C96 /* Cell */,
 				90E413E22819544F001F1C96 /* ViewController.swift */,
 				90E413FA28197874001F1C96 /* AddFriendViewController.swift */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		90E413F4281961DA001F1C96 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		90E413F528196233001F1C96 /* Project Files */ = {

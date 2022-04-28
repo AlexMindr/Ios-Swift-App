@@ -25,6 +25,7 @@ class AddFriendViewController: UIViewController {
                txtName.text = friendModel?.name
                txtEmail.text = friendModel?.email
            }
+        title="Add Friend"
        }
   
     @IBAction func onClickAdd(_ sender: UIButton) {

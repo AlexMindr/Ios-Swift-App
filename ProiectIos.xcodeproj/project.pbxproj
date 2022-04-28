@@ -12,6 +12,7 @@
 		90BD9CA6281AE68000530E31 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BD9C9E281AE67F00530E31 /* FMDatabase.m */; };
 		90BD9CA7281AE68000530E31 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BD9C9F281AE67F00530E31 /* FMDatabaseAdditions.m */; };
 		90BD9CA8281AE68000530E31 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BD9CA1281AE68000530E31 /* FMResultSet.m */; };
+		90BD9CAD281AFA8400530E31 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD9CAC281AFA8400530E31 /* FriendsViewController.swift */; };
 		90E413DF2819544F001F1C96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E413DE2819544F001F1C96 /* AppDelegate.swift */; };
 		90E413E12819544F001F1C96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E413E02819544F001F1C96 /* SceneDelegate.swift */; };
 		90E413E32819544F001F1C96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E413E22819544F001F1C96 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 		90BD9CA1281AE68000530E31 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		90BD9CA2281AE68000530E31 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		90BD9CAB281AF93C00530E31 /* FMResultSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		90BD9CAC281AFA8400530E31 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		90E413DB2819544F001F1C96 /* ProiectIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProiectIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E413DE2819544F001F1C96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90E413E02819544F001F1C96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				90E413FC2819879F001F1C96 /* Cell */,
 				90E413E22819544F001F1C96 /* ViewController.swift */,
 				90E413FA28197874001F1C96 /* AddFriendViewController.swift */,
+				90BD9CAC281AFA8400530E31 /* FriendsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				90E4141728199B72001F1C96 /* FriendModel.swift in Sources */,
 				90E413FB28197874001F1C96 /* AddFriendViewController.swift in Sources */,
 				90E413E32819544F001F1C96 /* ViewController.swift in Sources */,
+				90BD9CAD281AFA8400530E31 /* FriendsViewController.swift in Sources */,
 				90BD9CA4281AE68000530E31 /* FMDatabasePool.m in Sources */,
 				90BD9CA5281AE68000530E31 /* FMDatabaseQueue.m in Sources */,
 				90BD9CA8281AE68000530E31 /* FMResultSet.m in Sources */,

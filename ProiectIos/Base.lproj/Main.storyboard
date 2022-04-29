@@ -101,7 +101,7 @@
                                     <constraint firstAttribute="height" constant="50" id="UYJ-8Y-Ncf"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Share"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJd-Km-7Me">
                                 <rect key="frame" x="140" y="752" width="148" height="50"/>
@@ -141,6 +141,7 @@
                     <navigationItem key="navigationItem" id="78F-lb-7DA"/>
                     <connections>
                         <outlet property="btnBrowse" destination="oJd-Km-7Me" id="j0m-1j-EJ8"/>
+                        <outlet property="btnShare" destination="rI0-lC-UU4" id="i1M-Zb-S3P"/>
                         <outlet property="imageView" destination="8f9-SL-2mP" id="ILl-aW-E3Z"/>
                     </connections>
                 </viewController>

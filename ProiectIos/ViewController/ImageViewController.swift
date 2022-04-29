@@ -10,13 +10,14 @@ import UIKit
 class ImageViewController: UIViewController {
 
     @IBOutlet weak var btnBrowse: UIButton!
-   
+    @IBOutlet weak var btnShare: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
      title="Share image"
+        btnShare.addTarget(self, action: #selector(presentShareSheet(_:)), for: .touchUpInside)
     }
     
     
@@ -26,6 +27,17 @@ class ImageViewController: UIViewController {
         vc.delegate=self
         vc.allowsEditing=true
         present(vc,animated: true)
+    }
+    
+    @objc private func presentShareSheet(_ sender: UIButton){
+        guard let imageShare = imageView.image else {
+            return
+        }
+        
+        let shareSheetVC = UIActivityViewController(activityItems:[imageShare], applicationActivities: nil)
+        shareSheetVC.popoverPresentationController?.sourceView=sender
+        shareSheetVC.popoverPresentationController?.sourceRect=sender.frame
+        present(shareSheetVC,animated:true)
     }
     
 }

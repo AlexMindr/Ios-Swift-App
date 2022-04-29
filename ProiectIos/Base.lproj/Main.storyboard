@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKc-U9-Tyg">
-                                <rect key="frame" x="150" y="200" width="100" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKc-U9-Tyg">
+                                <rect key="frame" x="164" y="200" width="100" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Cs4-On-ue1"/>
                                     <constraint firstAttribute="height" constant="40" id="TUz-Qh-xwT"/>
@@ -26,19 +26,31 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Friends"/>
                                 <connections>
+                                    <action selector="touchDownFr:" destination="BYZ-38-t0r" eventType="touchDown" id="xPP-fO-swq"/>
+                                    <action selector="touchUpInsFr:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ftD-oZ-r1K"/>
                                     <segue destination="ZVl-eK-nI1" kind="show" id="cFc-Lw-69q"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWE-R4-Kjh">
+                                <rect key="frame" x="181" y="299" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Button"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="fKc-U9-Tyg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KZ5-e6-hhw"/>
                             <constraint firstItem="fKc-U9-Tyg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="fHC-dg-QGx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="QVi-fE-HC7">
                         <barButtonItem key="backBarButtonItem" title=" " id="f56-LH-Rfx"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="btnFriends" destination="fKc-U9-Tyg" id="Ju4-ss-Yy9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

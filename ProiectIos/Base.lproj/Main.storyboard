@@ -31,17 +31,25 @@
                                     <segue destination="ZVl-eK-nI1" kind="show" id="cFc-Lw-69q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWE-R4-Kjh">
-                                <rect key="frame" x="181" y="299" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jt9-9f-Q1L">
+                                <rect key="frame" x="164" y="260" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="DfD-1n-AQO"/>
+                                    <constraint firstAttribute="height" constant="40" id="SbP-gp-eS4"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Gallery"/>
+                                <connections>
+                                    <segue destination="n7e-b6-QWD" kind="show" id="OyM-cb-1FI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fKc-U9-Tyg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KZ5-e6-hhw"/>
+                            <constraint firstItem="jt9-9f-Q1L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qfi-Yi-lpy"/>
+                            <constraint firstItem="jt9-9f-Q1L" firstAttribute="top" secondItem="fKc-U9-Tyg" secondAttribute="bottom" constant="20" id="Yk3-LM-038"/>
                             <constraint firstItem="fKc-U9-Tyg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="fHC-dg-QGx"/>
                         </constraints>
                     </view>
@@ -55,6 +63,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="370.09345794392522" y="109.50323974082075"/>
+        </scene>
+        <!--Gallery-->
+        <scene sceneID="qck-M7-j2u">
+            <objects>
+                <viewController id="n7e-b6-QWD" customClass="GalleryViewController" customModule="ProiectIos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qT0-0l-MTj">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="anB-xb-m4U"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Gallery" id="65K-K8-aB7">
+                        <barButtonItem key="backBarButtonItem" title=" " id="uen-YU-miP"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rfy-Dc-ZfT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1096" y="611"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="3a1-Dd-i6D">
+            <objects>
+                <viewController storyboardIdentifier="ImageShare" id="Og4-Ue-4cy" customClass="ImageViewController" customModule="ProiectIos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5sL-sw-Bwz">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="J8e-zn-j9H"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sfS-O6-U2Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1890" y="617"/>
         </scene>
         <!--Add Friend-->
         <scene sceneID="8K0-PS-66W">

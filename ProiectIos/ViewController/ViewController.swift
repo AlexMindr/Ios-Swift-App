@@ -27,7 +27,6 @@ class ViewController: UIViewController {
     
     @IBAction func onClick(_ sender: UIButton) {
         user=ModelManager.getInstance().getUser(username: txtUsername.text!)
-       // var users=ModelManager.getInstance().getUser(username: txtUsername.text!)
         let vc = storyboard?.instantiateViewController(identifier:"Home") as! HomeViewController
         vc.currentUser = user
         

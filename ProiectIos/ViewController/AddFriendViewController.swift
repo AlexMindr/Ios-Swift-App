@@ -27,8 +27,7 @@ class AddFriendViewController: UIViewController {
                buttonAdd.setTitle(headerTitle.uppercased(),for:.normal)
            }
        }
-    //buttonAdd.addTarget(self, action: #selector(onClickRedirect(_:)), for: .touchUpInside)
-  
+    
     @IBAction func onClickAdd(_ sender: UIButton) {
         if headerTitle != ""{
                     let friend = FriendModel(friendId: friendModel!.id, friendName: txtName.text!, friendEmail:txtEmail.text!)

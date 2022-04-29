@@ -49,10 +49,15 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top:1, left:1, bottom: 1, right: 1)
     }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.deselectItem(at: indexPath, animated: true)
-        let vc = storyboard?.instantiateViewController(identifier:"ImageShare") as! ImageViewController
-        navigationController?.pushViewController(vc, animated: true)
-    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        collectionView.deselectItem(at: indexPath, animated: true)
+//        let vc = storyboard?.instantiateViewController(identifier:"ImageShare") as! ImageViewController
+////        let SelectedItem = indexPath.row + 1
+////        UIImage(named: "\(images[indexPath.row]");
+//        print(SelectedItem)
+//        //vc.img = UIImage(named: GalleryCollectionViewCell.images[SelectedItem])
+//        
+//        navigationController?.pushViewController(vc, animated: true)
+//    }
 
 }

@@ -76,6 +76,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Gallery" id="65K-K8-aB7">
                         <barButtonItem key="backBarButtonItem" title=" " id="uen-YU-miP"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="aFY-Y4-nFJ">
+                            <connections>
+                                <segue destination="Og4-Ue-4cy" kind="show" id="ZAD-kV-4Kf"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfy-Dc-ZfT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -89,13 +94,59 @@
                     <view key="view" contentMode="scaleToFill" id="5sL-sw-Bwz">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rI0-lC-UU4">
+                                <rect key="frame" x="140" y="812" width="148" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="UYJ-8Y-Ncf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJd-Km-7Me">
+                                <rect key="frame" x="140" y="752" width="148" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="07R-Ri-T19"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Browse"/>
+                                <connections>
+                                    <action selector="didTapButton:" destination="Og4-Ue-4cy" eventType="touchUpInside" id="ibc-5y-Nrr"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8f9-SL-2mP">
+                                <rect key="frame" x="10" y="140" width="408" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="ouS-ZN-dfg"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="J8e-zn-j9H"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="J8e-zn-j9H" firstAttribute="trailing" secondItem="rI0-lC-UU4" secondAttribute="trailing" constant="140" id="2pb-OK-kV7"/>
+                            <constraint firstItem="rI0-lC-UU4" firstAttribute="top" secondItem="oJd-Km-7Me" secondAttribute="bottom" constant="10" id="7a6-Pm-vez"/>
+                            <constraint firstItem="8f9-SL-2mP" firstAttribute="top" secondItem="J8e-zn-j9H" secondAttribute="top" id="Aek-Sa-j6l"/>
+                            <constraint firstItem="J8e-zn-j9H" firstAttribute="trailing" secondItem="8f9-SL-2mP" secondAttribute="trailing" constant="10" id="GvN-sy-Qba"/>
+                            <constraint firstItem="8f9-SL-2mP" firstAttribute="leading" secondItem="J8e-zn-j9H" secondAttribute="leading" constant="10" id="Iog-6w-lHR"/>
+                            <constraint firstItem="J8e-zn-j9H" firstAttribute="bottom" secondItem="rI0-lC-UU4" secondAttribute="bottom" constant="30" id="OK2-BD-oXr"/>
+                            <constraint firstItem="8f9-SL-2mP" firstAttribute="centerX" secondItem="5sL-sw-Bwz" secondAttribute="centerX" id="Qtl-eU-Owt"/>
+                            <constraint firstItem="oJd-Km-7Me" firstAttribute="leading" secondItem="J8e-zn-j9H" secondAttribute="leading" constant="140" id="R8f-sO-PpS"/>
+                            <constraint firstItem="oJd-Km-7Me" firstAttribute="centerX" secondItem="5sL-sw-Bwz" secondAttribute="centerX" id="YHc-db-hJK"/>
+                            <constraint firstItem="rI0-lC-UU4" firstAttribute="leading" secondItem="J8e-zn-j9H" secondAttribute="leading" constant="140" id="ZmB-76-ptm"/>
+                            <constraint firstItem="J8e-zn-j9H" firstAttribute="trailing" secondItem="oJd-Km-7Me" secondAttribute="trailing" constant="140" id="eHa-g6-c71"/>
+                            <constraint firstItem="rI0-lC-UU4" firstAttribute="centerX" secondItem="5sL-sw-Bwz" secondAttribute="centerX" id="uJk-NN-2aj"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="78F-lb-7DA"/>
+                    <connections>
+                        <outlet property="btnBrowse" destination="oJd-Km-7Me" id="j0m-1j-EJ8"/>
+                        <outlet property="imageView" destination="8f9-SL-2mP" id="ILl-aW-E3Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfS-O6-U2Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1890" y="617"/>
+            <point key="canvasLocation" x="1889.7196261682243" y="616.84665226781863"/>
         </scene>
         <!--Add Friend-->
         <scene sceneID="8K0-PS-66W">

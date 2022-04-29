@@ -22,6 +22,47 @@ class ModelManager{
     }
     
     
+    func getUser(username:String) -> UserModel{
+        shareInstance.database?.open()
+        
+//        let resultSet : FMResultSet! = try! shareInstance.database?.executeQuery("SELECT id,name FROM Users WHERE username='adi' ", values:[username])
+//
+//        print("\(resultSet.string(forColumn: "id"))")
+//        var currentUser:UserModel
+//        if resultSet != nil{
+//           // currentUser = UserModel(userid: resultSet.string(forColumn: "id")!, userName: resultSet.string(forColumn: "name")!)
+//            currentUser = UserModel(userid: "", userName:  "Guest")
+//        }
+//        else {
+//            currentUser = UserModel(userid: "", userName:  "Guest")
+//        }
+//        shareInstance.database?.close()
+//        return currentUser
+        
+        let resultSet : FMResultSet! = try! shareInstance.database?.executeQuery("SELECT * FROM Users where username=?", values: [username])
+        var user = [UserModel]()
+        
+        if resultSet != nil{
+            while resultSet.next() {
+                let UserModel = UserModel(userid: resultSet.string(forColumn: "id")!, userName: resultSet.string(forColumn: "name")!)
+                user.append(UserModel)
+            }
+            
+        }
+       
+        shareInstance.database?.close()
+        if user.isEmpty {
+            let UserModel=UserModel(userid: "", userName:  "Guest")
+            return UserModel
+        }
+        else {
+            return user[0]
+        }
+        
+        
+        
+    }
+    
     
     func SaveData(FriendModel : FriendModel) -> Bool{
         shareInstance.database?.open()
@@ -35,7 +76,7 @@ class ModelManager{
     func getAllfriends() -> [FriendModel]{
         shareInstance.database?.open()
         //FMResultSet  :  Used to hold result of SQL query on FMDatabase object.
-        let resultSet : FMResultSet! = try! shareInstance.database?.executeQuery("SELECT * FROM friends", values: nil)
+        let resultSet : FMResultSet! = try! shareInstance.database?.executeQuery("SELECT * FROM Friends", values: nil)
         var allfriends = [FriendModel]()
         
         if resultSet != nil{
@@ -53,7 +94,7 @@ class ModelManager{
     func updateFriend(friend: FriendModel) -> Bool{
         shareInstance.database?.open()
         
-        let isUpdated = shareInstance.database?.executeUpdate("UPDATE friends SET name=?, email=? WHERE id=? ", withArgumentsIn: [friend.name,friend.email, friend.id])
+        let isUpdated = shareInstance.database?.executeUpdate("UPDATE Friends SET name=?, email=? WHERE id=? ", withArgumentsIn: [friend.name,friend.email, friend.id])
         
         shareInstance.database?.close()
         return isUpdated!
@@ -63,7 +104,7 @@ class ModelManager{
    
     func deleteFriend(friend: FriendModel) -> Bool{
         shareInstance.database?.open()
-        let isDeleted = (shareInstance.database?.executeUpdate("DELETE FROM friends WHERE name=?", withArgumentsIn: [friend.name]))
+        let isDeleted = (shareInstance.database?.executeUpdate("DELETE FROM Friends WHERE name=?", withArgumentsIn: [friend.name]))
         shareInstance.database?.close()
         return isDeleted!
     }

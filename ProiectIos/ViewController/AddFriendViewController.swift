@@ -24,8 +24,10 @@ class AddFriendViewController: UIViewController {
                self.title = "\(headerTitle) Friend"
                txtName.text = friendModel?.name
                txtEmail.text = friendModel?.email
+               buttonAdd.setTitle(headerTitle.uppercased(),for:.normal)
            }
        }
+    //buttonAdd.addTarget(self, action: #selector(onClickRedirect(_:)), for: .touchUpInside)
   
     @IBAction func onClickAdd(_ sender: UIButton) {
         if headerTitle != ""{
@@ -37,6 +39,10 @@ class AddFriendViewController: UIViewController {
                     let friend = FriendModel(friendId: "", friendName: txtName.text!, friendEmail: txtEmail.text!)
                     let isSave = ModelManager.getInstance().SaveData(FriendModel: friend)
                     print("isSave :- \(isSave)")
-                }    }
-    
+                }
+        onClickRedirect()
+    }
+    @objc func onClickRedirect(){
+           navigationController?.popViewController( animated: true)
+       }
 }

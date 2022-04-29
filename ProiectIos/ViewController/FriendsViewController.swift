@@ -36,7 +36,6 @@ extension FriendsViewController: UITableViewDelegate,UITableViewDataSource{
         let cell=tableView.dequeueReusableCell(withIdentifier: "FriendCell",for:indexPath) as! FriendTableViewCell
         cell.lblName.text = friends[indexPath.row].name
         cell.lblEmail.text = friends[indexPath.row].email
-//        cell.lblRollNo.text = friends[indexPath.row].id
         cell.btnEdit.tag = indexPath.row
         cell.btnDelete.tag = indexPath.row
         cell.btnEdit.addTarget(self, action: #selector(onClickEdit(_:)), for: .touchUpInside)

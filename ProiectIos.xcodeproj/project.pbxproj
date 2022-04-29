@@ -10,6 +10,7 @@
 		9037BE57281C1855007E83B8 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037BE56281C1855007E83B8 /* GalleryViewController.swift */; };
 		9037BE59281C1A18007E83B8 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037BE58281C1A18007E83B8 /* GalleryCollectionViewCell.swift */; };
 		9037BE5B281C2974007E83B8 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037BE5A281C2974007E83B8 /* ImageViewController.swift */; };
+		9037BE5D281C791D007E83B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037BE5C281C791D007E83B8 /* HomeViewController.swift */; };
 		90BD9CA4281AE68000530E31 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BD9C9A281AE67F00530E31 /* FMDatabasePool.m */; };
 		90BD9CA5281AE68000530E31 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BD9C9D281AE67F00530E31 /* FMDatabaseQueue.m */; };
 		90BD9CA6281AE68000530E31 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BD9C9E281AE67F00530E31 /* FMDatabase.m */; };
@@ -34,6 +35,7 @@
 		9037BE56281C1855007E83B8 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		9037BE58281C1A18007E83B8 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		9037BE5A281C2974007E83B8 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		9037BE5C281C791D007E83B8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		90BD9C99281AE67F00530E31 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
 		90BD9C9A281AE67F00530E31 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
 		90BD9C9B281AE67F00530E31 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				90BD9CAC281AFA8400530E31 /* FriendsViewController.swift */,
 				9037BE56281C1855007E83B8 /* GalleryViewController.swift */,
 				9037BE5A281C2974007E83B8 /* ImageViewController.swift */,
+				9037BE5C281C791D007E83B8 /* HomeViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				90E4141728199B72001F1C96 /* FriendModel.swift in Sources */,
 				9037BE5B281C2974007E83B8 /* ImageViewController.swift in Sources */,
 				90E413FB28197874001F1C96 /* AddFriendViewController.swift in Sources */,
+				9037BE5D281C791D007E83B8 /* HomeViewController.swift in Sources */,
 				90E413E32819544F001F1C96 /* ViewController.swift in Sources */,
 				90BD9CAD281AFA8400530E31 /* FriendsViewController.swift in Sources */,
 				90BD9CA4281AE68000530E31 /* FMDatabasePool.m in Sources */,

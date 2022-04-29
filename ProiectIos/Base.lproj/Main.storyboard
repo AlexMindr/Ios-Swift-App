@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProiectIos" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,48 +17,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKc-U9-Tyg">
-                                <rect key="frame" x="164" y="200" width="100" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="Cs4-On-ue1"/>
-                                    <constraint firstAttribute="height" constant="40" id="TUz-Qh-xwT"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMg-1q-84B">
+                                <rect key="frame" x="181" y="385" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Friends"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
-                                    <action selector="touchDownFr:" destination="BYZ-38-t0r" eventType="touchDown" id="xPP-fO-swq"/>
-                                    <action selector="touchUpInsFr:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ftD-oZ-r1K"/>
-                                    <segue destination="ZVl-eK-nI1" kind="show" id="cFc-Lw-69q"/>
+                                    <segue destination="cip-o4-rnk" kind="show" id="cJQ-Vg-330"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jt9-9f-Q1L">
-                                <rect key="frame" x="164" y="260" width="100" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="DfD-1n-AQO"/>
-                                    <constraint firstAttribute="height" constant="40" id="SbP-gp-eS4"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Gallery"/>
-                                <connections>
-                                    <segue destination="n7e-b6-QWD" kind="show" id="OyM-cb-1FI"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4zv-mg-Vt2">
+                                <rect key="frame" x="166" y="324" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="fKc-U9-Tyg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KZ5-e6-hhw"/>
-                            <constraint firstItem="jt9-9f-Q1L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qfi-Yi-lpy"/>
-                            <constraint firstItem="jt9-9f-Q1L" firstAttribute="top" secondItem="fKc-U9-Tyg" secondAttribute="bottom" constant="20" id="Yk3-LM-038"/>
-                            <constraint firstItem="fKc-U9-Tyg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="fHC-dg-QGx"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="QVi-fE-HC7">
+                    <navigationItem key="navigationItem" title="Login" id="QVi-fE-HC7">
                         <barButtonItem key="backBarButtonItem" title=" " id="f56-LH-Rfx"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="btnFriends" destination="fKc-U9-Tyg" id="Ju4-ss-Yy9"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfy-Dc-ZfT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1096" y="611"/>
+            <point key="canvasLocation" x="1930" y="592"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="3a1-Dd-i6D">
@@ -147,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfS-O6-U2Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1889.7196261682243" y="616.84665226781863"/>
+            <point key="canvasLocation" x="2607" y="600"/>
         </scene>
         <!--Add Friend-->
         <scene sceneID="8K0-PS-66W">
@@ -211,7 +191,71 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yws-Mk-YuG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1877" y="-76"/>
+            <point key="canvasLocation" x="2519" y="-75"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="CWd-RH-KKO">
+            <objects>
+                <viewController id="cip-o4-rnk" customClass="HomeViewController" customModule="ProiectIos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="frL-sn-Gmp">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKc-U9-Tyg">
+                                <rect key="frame" x="139" y="240" width="150" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Cs4-On-ue1"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="E3j-aT-o0G"/>
+                                    <constraint firstAttribute="height" constant="60" id="TUz-Qh-xwT"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="WJN-bm-hEG"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Friends"/>
+                                <connections>
+                                    <action selector="touch:" destination="cip-o4-rnk" eventType="touchDownRepeat" id="R3B-GY-sa2"/>
+                                    <action selector="touchDown:" destination="cip-o4-rnk" eventType="touchDown" id="Ia3-mB-zLB"/>
+                                    <action selector="touchUpIns:" destination="cip-o4-rnk" eventType="touchUpInside" id="dSe-Dl-rlH"/>
+                                    <segue destination="ZVl-eK-nI1" kind="show" id="cFc-Lw-69q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jt9-9f-Q1L">
+                                <rect key="frame" x="139" y="320" width="150" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="13I-Ah-Dof"/>
+                                    <constraint firstAttribute="width" constant="150" id="DfD-1n-AQO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="OZu-Ub-5mX"/>
+                                    <constraint firstAttribute="height" constant="60" id="SbP-gp-eS4"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Gallery"/>
+                                <connections>
+                                    <action selector="touchDown:" destination="cip-o4-rnk" eventType="touchDown" id="k4j-7j-xaN"/>
+                                    <action selector="touchDownRep:" destination="cip-o4-rnk" eventType="touchDownRepeat" id="ymn-H4-KDR"/>
+                                    <action selector="touchUpIns:" destination="cip-o4-rnk" eventType="touchUpInside" id="pIx-A2-HcI"/>
+                                    <segue destination="n7e-b6-QWD" kind="show" id="OyM-cb-1FI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="15T-NO-m62"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fKc-U9-Tyg" firstAttribute="centerX" secondItem="frL-sn-Gmp" secondAttribute="centerX" id="DWr-7C-eRU"/>
+                            <constraint firstItem="fKc-U9-Tyg" firstAttribute="top" secondItem="15T-NO-m62" secondAttribute="top" constant="100" id="Dj8-Jh-trI"/>
+                            <constraint firstItem="jt9-9f-Q1L" firstAttribute="top" secondItem="fKc-U9-Tyg" secondAttribute="bottom" constant="20" id="yAV-Sq-a8j"/>
+                            <constraint firstItem="jt9-9f-Q1L" firstAttribute="centerX" secondItem="frL-sn-Gmp" secondAttribute="centerX" id="z6s-s1-7ZI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="j5b-wq-uOJ">
+                        <barButtonItem key="backBarButtonItem" title=" " id="2pf-1n-CAa"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnFriends" destination="fKc-U9-Tyg" id="Usg-v5-9vY"/>
+                        <outlet property="btnGallery" destination="jt9-9f-Q1L" id="JFj-uk-x9T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CGH-SC-iOf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1030" y="287"/>
         </scene>
         <!--All Friends-->
         <scene sceneID="nGN-AF-HUw">
@@ -336,7 +380,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T09-Yv-rHq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1119" y="-86"/>
+            <point key="canvasLocation" x="1841" y="-75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cTi-op-Jc0">

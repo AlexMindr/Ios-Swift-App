@@ -41,13 +41,13 @@ class Util{
                 if let dbFilePath = Bundle.main.path(forResource: "SqliteDB", ofType: "db") {
                     try fileManager.copyItem(atPath: dbFilePath, toPath: finalDatabaseURL.path)
                 } else {
-                    print("Uh oh - foo.db is not in the app bundle")
+                    print("Uh oh - .db is not in the app bundle")
                 }
             } else {
                 print("Database file found at path: \(finalDatabaseURL.path)")
             }
         } catch {
-            print("Unable to copy foo.db: \(error)")
+            print("Unable to copy .db: \(error)")
         }
     }
     

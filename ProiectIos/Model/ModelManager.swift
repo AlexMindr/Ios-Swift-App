@@ -16,7 +16,9 @@ class ModelManager{
     
     static func getInstance() -> ModelManager{
         if shareInstance.database == nil{
-            shareInstance.database = FMDatabase(path: Util.share.getPath(dbName: "SqliteDB.db"))
+            Util.share.copyDatabaseIfNeeded()
+            let dbPath = Util.share.getPath(dbName: "SqliteDB.db")
+            shareInstance.database = FMDatabase(path: dbPath)
         }
         return shareInstance
     }
@@ -24,21 +26,7 @@ class ModelManager{
     
     func getUser(username:String) -> UserModel{
         shareInstance.database?.open()
-        
-//        let resultSet : FMResultSet! = try! shareInstance.database?.executeQuery("SELECT id,name FROM Users WHERE username='adi' ", values:[username])
-//
-//        print("\(resultSet.string(forColumn: "id"))")
-//        var currentUser:UserModel
-//        if resultSet != nil{
-//           // currentUser = UserModel(userid: resultSet.string(forColumn: "id")!, userName: resultSet.string(forColumn: "name")!)
-//            currentUser = UserModel(userid: "", userName:  "Guest")
-//        }
-//        else {
-//            currentUser = UserModel(userid: "", userName:  "Guest")
-//        }
-//        shareInstance.database?.close()
-//        return currentUser
-        
+         
         let resultSet : FMResultSet! = try! shareInstance.database?.executeQuery("SELECT * FROM Users where username=?", values: [username])
         var user = [UserModel]()
         

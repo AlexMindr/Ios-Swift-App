@@ -12,7 +12,6 @@
 		9037BE5B281C2974007E83B8 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037BE5A281C2974007E83B8 /* ImageViewController.swift */; };
 		9037BE5D281C791D007E83B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037BE5C281C791D007E83B8 /* HomeViewController.swift */; };
 		90506F60281C7F5100243E5D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90506F5F281C7F5100243E5D /* UserModel.swift */; };
-		90506F62281C96C000243E5D /* SqliteDB.db in Resources */ = {isa = PBXBuildFile; fileRef = 90506F61281C96C000243E5D /* SqliteDB.db */; };
 		90BD9CA4281AE68000530E31 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BD9C9A281AE67F00530E31 /* FMDatabasePool.m */; };
 		90BD9CA5281AE68000530E31 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BD9C9D281AE67F00530E31 /* FMDatabaseQueue.m */; };
 		90BD9CA6281AE68000530E31 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BD9C9E281AE67F00530E31 /* FMDatabase.m */; };
@@ -30,6 +29,7 @@
 		90E41415281999B7001F1C96 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E41414281999B7001F1C96 /* Util.swift */; };
 		90E4141728199B72001F1C96 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E4141628199B72001F1C96 /* FriendModel.swift */; };
 		90E4141928199C39001F1C96 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E4141828199C39001F1C96 /* ModelManager.swift */; };
+		90F518742825E7D3007DF705 /* SqliteDB.db in Resources */ = {isa = PBXBuildFile; fileRef = 90F518732825E7D3007DF705 /* SqliteDB.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +38,6 @@
 		9037BE5A281C2974007E83B8 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		9037BE5C281C791D007E83B8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		90506F5F281C7F5100243E5D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		90506F61281C96C000243E5D /* SqliteDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = SqliteDB.db; sourceTree = "<group>"; };
 		90BD9C99281AE67F00530E31 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
 		90BD9C9A281AE67F00530E31 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
 		90BD9C9B281AE67F00530E31 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
@@ -65,6 +64,7 @@
 		90E4141628199B72001F1C96 /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
 		90E4141828199C39001F1C96 /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
 		90E4145F2819AB64001F1C96 /* ProiectIos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProiectIos-Bridging-Header.h"; sourceTree = "<group>"; };
+		90F518732825E7D3007DF705 /* SqliteDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = SqliteDB.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +110,7 @@
 		90E413F2281961BF001F1C96 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				90506F61281C96C000243E5D /* SqliteDB.db */,
+				90F518732825E7D3007DF705 /* SqliteDB.db */,
 				90E41414281999B7001F1C96 /* Util.swift */,
 				90E4141628199B72001F1C96 /* FriendModel.swift */,
 				90E4141828199C39001F1C96 /* ModelManager.swift */,
@@ -242,7 +242,7 @@
 				90E413EB28195450001F1C96 /* LaunchScreen.storyboard in Resources */,
 				90E413E828195450001F1C96 /* Assets.xcassets in Resources */,
 				90E413E62819544F001F1C96 /* Main.storyboard in Resources */,
-				90506F62281C96C000243E5D /* SqliteDB.db in Resources */,
+				90F518742825E7D3007DF705 /* SqliteDB.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

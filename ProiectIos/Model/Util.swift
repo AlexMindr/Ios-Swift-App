@@ -15,27 +15,41 @@ class Util{
       func getPath(dbName: String) -> String{
           let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
           let fileUrl = documentDirectory.appendingPathComponent(dbName)
-          //print("DB Path :- \(fileUrl.path)")
-          //print("!!!Path :- \(documentDirectory.path)")
+          //let databaseInMainBundleURL = Bundle.main.resourceURL?.appendingPathComponent("SqliteDB.db")
+            //print("DB Path :- \(fileUrl.path)")
+            //print("!!!Path :- \(documentDirectory.path)")
+          //print("DB Path :- \(databaseInMainBundleURL)")
           return fileUrl.path
+          
       }
       
-      //MARK:- Create path if it doesn't exists
-      func copyDatabase(dbName: String){
-          let dbPath = getPath(dbName: "SqliteDB.db")
-          let fileManager = FileManager.default
-          
-          if !fileManager.fileExists(atPath: dbPath){
-              let bundle = Bundle.main.resourceURL
-              let file = bundle?.appendingPathComponent(dbName)
-              
-              do{
-                  try fileManager.copyItem(atPath: file!.path, toPath: dbPath)
-              }
-              catch let err{
-                  print(err.localizedDescription)
-              }
-          }
-      }
+     
+    
+    func copyDatabaseIfNeeded() {
+        // Move database file from bundle to documents folder
+
+        let fileManager = FileManager.default
+
+        guard let documentsUrl = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
+
+        let finalDatabaseURL = documentsUrl.appendingPathComponent("SqliteDB.db")
+
+        do {
+            if !fileManager.fileExists(atPath: finalDatabaseURL.path) {
+                print("DB does not exist in documents folder")
+
+                if let dbFilePath = Bundle.main.path(forResource: "SqliteDB", ofType: "db") {
+                    try fileManager.copyItem(atPath: dbFilePath, toPath: finalDatabaseURL.path)
+                } else {
+                    print("Uh oh - foo.db is not in the app bundle")
+                }
+            } else {
+                print("Database file found at path: \(finalDatabaseURL.path)")
+            }
+        } catch {
+            print("Unable to copy foo.db: \(error)")
+        }
+    }
+    
     
 }

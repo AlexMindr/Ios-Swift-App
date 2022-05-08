@@ -12,13 +12,20 @@ class Util{
     static let share=Util()
  
     //MARK:- Getting path of our Database
-      func getPath(dbName: String) -> String{
-          let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-          let fileUrl = documentDirectory.appendingPathComponent(dbName)
-          //let databaseInMainBundleURL = Bundle.main.resourceURL?.appendingPathComponent("SqliteDB.db")
-            //print("DB Path :- \(fileUrl.path)")
-            //print("!!!Path :- \(documentDirectory.path)")
-          //print("DB Path :- \(databaseInMainBundleURL)")
+//       func getPath(dbName: String) -> String{
+//           let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+//           let fileUrl = documentDirectory.appendingPathComponent(dbName)
+//           //let databaseInMainBundleURL = Bundle.main.resourceURL?.appendingPathComponent("SqliteDB.db")
+//             //print("DB Path :- \(fileUrl.path)")
+//             //print("!!!Path :- \(documentDirectory.path)")
+//           //print("DB Path :- \(databaseInMainBundleURL)")
+//           return fileUrl.path
+          
+//       }
+     func getPath(dbName: String) -> String{
+          
+          let documentDirectory = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+          let fileUrl = documentDirectory.appendingPathComponent("SqliteDB.db")
           return fileUrl.path
           
       }
